@@ -5,7 +5,7 @@ You might want to use Processing from its command line interface for several rea
 
 ## Installation
 1. Install and open the Processing software
-1. MacOS users only: under **Tools**, click `Install "processing-java"`
+2. MacOS users only: under **Tools**, click `Install "processing-java"`
 
 ## Usage
 ``` shell
@@ -26,14 +26,14 @@ There are a lot of different ways to autostart a program on a Unix-like environm
 mkdir ~/.config/autostart
 nano ~/.config/autostart/sketch.desktop
 ```
-1. Paste the following text and edit the `Name` and `Exec` entries with your own name/path (blank spaces are not allowed).
+2. Paste the following text and edit the `Name` and `Exec` entries with your own name/path (blank spaces are not allowed).
 ```
 [Desktop Entry]
 Type=Application
 Name=processingSketch
 Exec=processing-java --sketch=/absolute/path/to/sketchfolder --run
 ```
-1. Hit `ctrl-x`, `Y`, and `Enter` to save and quit nano
+3. Hit `ctrl-x`, `Y`, and `Enter` to save and quit nano
 
 You might want your sketch to run in fullscreen mode, and to prevent the cursor from appearing. You can modify your Processing sketch with these two functions :
 
@@ -53,11 +53,11 @@ If you want to prevent the Raspberry Pi from sleeping:
 ``` shell
 sudo nano /etc/lightdm/lightdm.conf
 ```
-1. Uncomment the `#xserver-command=X` line under the `[Seat:*]` section and modify it exactly as follows:
+2. Uncomment the `#xserver-command=X` line under the `[Seat:*]` section and modify it exactly as follows:
 ```
 xserver-command=X -s 0 dpms
 ```
-1. Hit `ctrl-x`, `Y`, and `Enter` to save and quit nano
+3. Hit `ctrl-x`, `Y`, and `Enter` to save and quit nano
 
 A simpler way of preventing the Raspberry Pi would be to install the `xscreensaver` application. It provides an easy to use interface for configuring the screensaver, along with an option to disable it.
 
